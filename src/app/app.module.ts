@@ -17,6 +17,7 @@ import { HomeComponent } from './home/home.component';
 import { UsersComponent } from './users/users.component';
 import { routes } from './app.routes';
 import { NavComponent } from './nav/nav.component';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { NavComponent } from './nav/nav.component';
     HomeComponent,
     UsersComponent,
     NavComponent,
+    HighlightDirective,
   ],
   imports: [
     BrowserModule,
