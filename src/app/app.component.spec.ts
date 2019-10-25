@@ -1,12 +1,16 @@
-import { TestBed, async } from '@angular/core/testing';
-import { AppComponent } from './app.component';
+
+import { async, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
-import { RouterOutlet, RouterLinkWithHref } from '@angular/router';
+import { RouterOutlet } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
+
+import { AppComponent } from './app.component';
 import { routes } from './app.routes';
 import { HomeComponent } from './home/home.component';
-import { UsersComponent } from './users/users.component';
+import { NavComponent } from './nav/nav.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
+import { UsersComponent } from './users/users.component';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -15,8 +19,10 @@ describe('AppComponent', () => {
         AppComponent,
         HomeComponent,
         UsersComponent,
-        UserDetailsComponent
+        UserDetailsComponent,
+        NavComponent
       ],
+      schemas: [ NO_ERRORS_SCHEMA ],
       imports: [RouterTestingModule.withRoutes(routes)]
     }).compileComponents();
   }));
@@ -39,14 +45,6 @@ describe('AppComponent', () => {
     const de = fixture.debugElement.query(By.directive(RouterOutlet));
 
     expect(de).not.toBeNull();
-  });
-
-  it ('should have a link to users page', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const debugElements = fixture.debugElement.queryAll(By.directive(RouterLinkWithHref));
-
-    const index = debugElements.findIndex(de => de.attributes['routerLink'] === 'users');
-    expect(index).toBeGreaterThan(-1);
   });
 
 });

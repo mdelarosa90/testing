@@ -16,6 +16,7 @@ import { UserDetailsComponent } from './user-details/user-details.component';
 import { HomeComponent } from './home/home.component';
 import { UsersComponent } from './users/users.component';
 import { routes } from './app.routes';
+import { NavComponent } from './nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { routes } from './app.routes';
     UserDetailsComponent,
     HomeComponent,
     UsersComponent,
+    NavComponent,
   ],
   imports: [
     BrowserModule,
