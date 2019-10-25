@@ -10,6 +10,7 @@ import { SetupAndTearDownComponent } from './setup-and-tear-down/setup-and-tear-
 import { FormsComponent } from './forms/forms.component';
 import { EventEmittersComponent } from './event-emitters/event-emitters.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { VoterComponent } from './voter/voter.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     SetupAndTearDownComponent,
     FormsComponent,
     EventEmittersComponent,
+    VoterComponent,
   ],
   imports: [
     BrowserModule,
