@@ -40,4 +40,10 @@ describe('FormsComponent', () => {
     control.setValue('');
     expect(control.valid).toBeFalsy();
   });
+
+  it('should make the email control valid', () => {
+    const control = component.form.get('email');
+    control.setValue('');
+    expect(control.valid).toBeTruthy();
+  });
 });

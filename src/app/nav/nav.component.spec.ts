@@ -30,6 +30,8 @@ describe('NavComponent', () => {
     const debugElements = fixture.debugElement.queryAll(By.directive(RouterLinkWithHref));
 
     const index = debugElements.findIndex(de => de.attributes['routerLink'] === 'users');
+    const index2= debugElements.findIndex(de => de.attributes['routerLink'] === 'debtors');
     expect(index).toBeGreaterThan(-1);
+    expect(index2).toBeGreaterThan(-1);
   });
 });

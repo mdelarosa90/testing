@@ -24,7 +24,7 @@ describe('ArraysAndStringsComponent', () => {
   });
 
   it('should include the name in the message', () => {
-    expect(component.getGreet('mosh')).toContain('mosh');
+    expect(component.getGreet('mosh')).toContain('Welcome');
   });
 
   it('should return the supported currencies', () => {

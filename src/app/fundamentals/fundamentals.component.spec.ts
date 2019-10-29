@@ -28,6 +28,6 @@ describe('FundamentalsComponent', () => {
   });
 
   it ('return number > 1', () => {
-    expect(component.compute(1)).toEqual(2);
+    expect(component.compute(20)).toEqual(21);
   });
 });

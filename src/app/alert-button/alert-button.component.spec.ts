@@ -37,7 +37,8 @@ describe('AlertButtonComponent', () => {
   });
 
   it('should have an H1 tag of `Alert Button', () => {
-    expect(de.query(By.css('h1')).nativeElement.innerText).toBe('Alert Button');
+    expect(de.queryAll(By.css('h1'))[0].nativeElement.innerText).toBe('Alert Button');
+    expect(de.queryAll(By.css('h1'))[1].nativeElement.innerText).toBe('Alert2');
   });
 
   it('should toggle the message boolean', () => {
